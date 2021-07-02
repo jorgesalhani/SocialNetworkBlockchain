@@ -29,7 +29,13 @@ source venv/bin/activate
 
 Install truffle framework
 ~~~code
-npm install truffle@5.0.5
+npm install -g truffle@5.0.5
+~~~
+
+or, if it does not allow you, then run as su
+
+~~~code
+sudo npm install -g truffle@5.0.5
 ~~~
 
 Install dependencies
@@ -37,7 +43,7 @@ Install dependencies
 npm install
 ~~~
 
-Fix warnings
+Fix warnings (it may take a while...)
 ~~~code
 npm audit fix
 ~~~
