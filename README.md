@@ -27,6 +27,10 @@ python3 -m venv venv
 source venv/bin/activate
 ~~~
 
+Install truffle framework
+~~~code
+npm install truffle@5.0.5
+~~~
 
 Install dependencies
 ~~~code
