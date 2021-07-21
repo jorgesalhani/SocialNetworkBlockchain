@@ -11,47 +11,24 @@ LearningBlockchain: Basic components of a Blockchain
 LearningSmartContract: Basic implementation of a simple smart contract for bank transactions in Solidity. 
 * Following the tutorial [Write Your First Smart contract Using Remix IDE](https://betterprogramming.pub/developing-a-smart-contract-by-using-remix-ide-81ff6f44ba2f)
 
-Social Network: Basic social network implementation using [Ganache](https://www.trufflesuite.com/ganache) (user-friendly visualization for testing personal blockchain) and Truffle framework from npm
-* Following the tutorial [Blockchain Tutorial for Begginers](https://www.youtube.com/watch?v=0pKDav5wKBQ&ab_channel=DappUniversity)
+SocialNetworkPrototype: Basic implementation of a simple social network in Solidity. 
+* Inspiration from TaskManager smart contract, led by [Solange Gueires at Microsoft Reactor Sao Paulo Workshop](https://github.com/microsoft/ReactorSaoPaulo/tree/main/Workshops/Blockchain/Learn_Solidity)
 
 ### How to use our social network
+
+If you want to see the whole repository content, 
 
 Clone the repository:
 ```code
 git clone https://github.com/jorgesalhani/SocialNetworkBlockchain.git
 ```
 
-Set virtual environment
-~~~code
-python3 -m venv venv
-source venv/bin/activate
-~~~
+Otherwise, if you want just to check out our social network prototype, it goes as follows:
 
-Install truffle framework
-~~~code
-npm install -g truffle@5.0.5
-~~~
+Open the [remix platform](https://remix.ethereum.org)
 
-or, if it does not allow you, then run as su
+At the first, click on LOAD FROM: GitHub. It will pop up a window. In the text field to be filled, paste the url:
 
-~~~code
-sudo npm install -g truffle@5.0.5
-~~~
-
-Install dependencies
-~~~code
-npm install
-~~~
-
-Fix warnings (it may take a while...)
-~~~code
-npm audit fix
-~~~
-
-Run social network server
-~~~code
-npm run start
-~~~
-
-Hopefully, you are now on our Nasa Type Rocket social network! Enjoy! :D 
-
+```code
+git clone https://github.com/jorgesalhani/SocialNetworkBlockchain.git
+```
