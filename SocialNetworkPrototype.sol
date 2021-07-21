@@ -4,69 +4,84 @@ pragma solidity ^0.6.6;
 
 contract TaskManager {
 
-    uint public nTasks;
-    
-    //enum TaskPhase {ToDo = 0, InProgress = 1, Done = 2, ...}
-    enum TaskPhase {ToDo, InProgress, Done, Blocked, Review, Postponed, Canceled}
-    
-    struct TaskStruct {
-        address owner;
-        string name;
-        TaskPhase phase;
-        // Priority 1-5: 1 higher, 5 less important
-        uint priority;
-    }
-    TaskStruct[] private tasks;
-    //TaskStruct[] public tasks;
-    
-    mapping (address => uint[]) private myTasks;
-    //mapping (address => uint[]) public myTasks;
+    uint public nposts;
 
-    event TaskAdded(address owner, string name, TaskPhase phase, uint priority);
+    //enum PostTrustLabel. Based on AGENCIA LUPA labels
+    /*{
+        Fake = 0, 
+        Unsustainable = 1, 
+        Underestimated = 2, 
+        Inconsistent = 3, 
+        Overestimated = 4, 
+        Naive = 5, 
+        Superficial = 6,
+        Trustful = 7
+      }
+    */
+    enum PostTrustLabel {
+        Fake, 
+        Unsustainable, 
+        Underestimated, 
+        Inconsistent, 
+        Overestimated, 
+        Naive,
+        Superficial,
+        Trustful
+    }
     
-    modifier onlyOwner (uint _taskIndex) {
-         if  (tasks[_taskIndex].owner == msg.sender) {
+    struct PostStruct {
+        address owner;
+        string content;
+        PostTrustLabel trust_label;
+    }
+    PostStruct[] private posts;
+    //PostStruct[] public posts;
+    
+    mapping (address => uint[]) private myposts;
+    //mapping (address => uint[]) public myposts;
+
+    event PostAdded(address owner, string content, PostTrustLabel trust_label);
+    
+    modifier onlyOwner (uint _post_index) {
+         if  (posts[_post_index].owner == msg.sender) {
            _;
         }
     }
     
     constructor() public {
-        nTasks = 0;      
-        addTask ("Create Task Manager", TaskPhase.Done, 1);
-        addTask ("Create Your first task", TaskPhase.ToDo, 1);
-        addTask ("Clean your house", TaskPhase.ToDo, 5);
+        nposts = 0;      
+        addPost ("News 1 - REALLY FAKE", PostTrustLabel.Fake);
+        addPost ("News 2 - INCONSISTENT", PostTrustLabel.Inconsistent);
+        addPost ("News 3 - TRUSTFUL", PostTrustLabel.Trustful);
     }    
 
-    function getTask(uint _taskIndex) public view
-        returns (address owner, string memory name, TaskPhase phase, uint priority) {
+    function getPost(uint _post_index) public view
+        returns (address owner, string memory content, PostTrustLabel trust_label) {
         
-        owner = tasks[_taskIndex].owner;
-        name = tasks[_taskIndex].name;
-        phase = tasks[_taskIndex].phase;
-        priority = tasks[_taskIndex].priority;
+        owner = posts[_post_index].owner;
+        content = posts[_post_index].content;
+        trust_label = posts[_post_index].trust_label;
     }
     
-    function listMyTasks() public view returns (uint[] memory) {
-        return myTasks[msg.sender];
+    function listMyPosts() public view returns (uint[] memory) {
+        return myposts[msg.sender];
     }
     
-    function addTask(string memory _name, TaskPhase _phase, uint _priority) public returns (uint index) {
-        require ((_priority >= 1 && _priority <=5), "priority must be between 1 and 5");
-        TaskStruct memory taskAux = TaskStruct ({
+    function addPost(string memory _content, PostTrustLabel _trust_label) public returns (uint index) {
+        PostStruct memory postAux = PostStruct ({
             owner: msg.sender,
-            name: _name,
-            phase: _phase, 
-            priority: _priority
+            content: _content,
+            trust_label: _trust_label 
         });
-        tasks.push (taskAux);
-        index = tasks.length - 1;
-        nTasks ++;
-        myTasks[msg.sender].push(index);
-        emit TaskAdded (msg.sender, _name, _phase, _priority);
+        posts.push (postAux);
+        index = posts.length - 1;
+        nposts ++;
+        myposts[msg.sender].push(index);
+        emit PostAdded (msg.sender, _content, _trust_label);
     }
     
-    function updatePhase(uint _taskIndex, TaskPhase _phase) public onlyOwner(_taskIndex) {
-        tasks[_taskIndex].phase = _phase;
+    function update_trust_label(uint _post_index, PostTrustLabel _trust_label) public onlyOwner(_post_index) {
+        posts[_post_index].trust_label = _trust_label;
     }
     
 }
