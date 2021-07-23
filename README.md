@@ -14,6 +14,12 @@ LearningSmartContract: Basic implementation of a simple smart contract for bank 
 SocialNetworkPrototype: Basic implementation of a simple social network in Solidity. 
 * Inspiration from TaskManager smart contract, led by [Solange Gueires at Microsoft Reactor Sao Paulo Workshop](https://github.com/microsoft/ReactorSaoPaulo/tree/main/Workshops/Blockchain/Learn_Solidity)
 
+ArticleSocialNetworkPrototype: Authored article submitted to (Journal and Event Management System (JEMS))[https://jems.sbc.org.br/jems2/index.php?r=paper/view&p=217544] we based our prototype. Written in collaboration with 
+
+* Gabrielle Ap Pires Alves (Universidade de São Paulo)
+* Marcelo G. Manzato (University of Sao Paulo)
+* Jó Ueyama (Universidade de São Paulo)
+
 ### How to use our social network
 
 If you want to see the whole repository content, 
@@ -79,16 +85,16 @@ updateTrustLabel(uint _post_index, PostTrustLabel _trust_label)
 where we define the post trust label as 
 
 ```solidity
-    enum PostTrustLabel {
-        Fake, 
-        Unsustainable, 
-        Underestimated, 
-        Inconsistent, 
-        Overestimated, 
-        Naive,
-        Superficial,
-        Trustful
-    }
+enum PostTrustLabel {
+    Fake, 
+    Unsustainable, 
+    Underestimated, 
+    Inconsistent, 
+    Overestimated, 
+    Naive,
+    Superficial,
+    Trustful
+}
 ```
 
 and the view functions (visualize current state) are:
@@ -104,3 +110,73 @@ nposts
 The environment is set! Now let us move to the fun part and create posts with our smart contract!
 
 ### Using our Social Network Prototype functions
+
+By definition, we start our social network prototype with 8 posts, one for each trust label, and we post them via the deployment account.
+
+At first, let us see how the view functions work.
+
+By clicking at **nposts**, we can see how many posts our social network has (which is 8).
+
+![Step 9](https://github.com/jorgesalhani/SocialNetworkBlockchain/blob/main/ExplanatoryFigures/step9.png)
+
+By clicking at **listMyPosts** we can see the index of the posts owned by the current account (which are 0,1,...,6,7)
+
+![Step 10](https://github.com/jorgesalhani/SocialNetworkBlockchain/blob/main/ExplanatoryFigures/step10.png)
+
+By clicking at **getPost** we can see the post owner account, the post content and its trust label
+
+![Step 11](https://github.com/jorgesalhani/SocialNetworkBlockchain/blob/main/ExplanatoryFigures/step11.png)
+
+Now, let us step forward to the state-changing functions.
+
+By clicking at **addPost** we must informe its content and its trust label.
+
+![Step 13](https://github.com/jorgesalhani/SocialNetworkBlockchain/blob/main/ExplanatoryFigures/step13.png)
+
+Confirm the transaction by pressing the button transact. It will generate a log into the terminal.
+
+![Step 14](https://github.com/jorgesalhani/SocialNetworkBlockchain/blob/main/ExplanatoryFigures/step14.png)
+
+Some of the informations displayed are: 
+
+* __from__: the account that made the transaction
+* __execution cost__: the cost in gas to execute the transaction
+* __hash__: the hash associated to this transaction
+* __input__: the encoded transaction
+
+If we click to **listMyPosts**, the new post was added and can be viewed by insert 8 to **getPost**
+
+![Step 12](https://github.com/jorgesalhani/SocialNetworkBlockchain/blob/main/ExplanatoryFigures/step12.png)
+
+
+Now, let us change the account, simulating a different person.
+
+![Step 13](https://github.com/jorgesalhani/SocialNetworkBlockchain/blob/main/ExplanatoryFigures/step13.png)
+
+Let us add a post with **addPost**, get its content with **getPost**, check our post list with **listMyPosts** and check the total posts within our blockchain with **nposts**
+
+![Step 14](https://github.com/jorgesalhani/SocialNetworkBlockchain/blob/main/ExplanatoryFigures/step14.png)
+
+And now, let us select another account and follow the previous steps
+
+![Step 15](https://github.com/jorgesalhani/SocialNetworkBlockchain/blob/main/ExplanatoryFigures/step15.png)
+
+Knowing that the information from the last post is fake, we (as this account) can change its trust label to 0 (enum: FAKE) by insert its post index (9) and the updated trust label (0) into the function **updateTrustLabel**
+
+After make the transaction, we can check the fake post with **getPost**
+
+![Step 16](https://github.com/jorgesalhani/SocialNetworkBlockchain/blob/main/ExplanatoryFigures/step16.png)
+
+With another account, let us add a post and get its content
+
+![Step 17](https://github.com/jorgesalhani/SocialNetworkBlockchain/blob/main/ExplanatoryFigures/step17.png)
+
+Let us suppose our 2nd friend read this post. She knows Brazil defeated China, however the score was not 3x2. She then decided to label it as Naive (partially truth) and update the truth label to 5
+
+![Step 17](https://github.com/jorgesalhani/SocialNetworkBlockchain/blob/main/ExplanatoryFigures/step17.png)
+
+### Disclaimer
+This prototype was theoricised to be more general, as shown in this article, however for this discipline's purpose, this is the final version we have.
+
+Hope you enjoyed! cheers!!
+
