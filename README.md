@@ -14,7 +14,7 @@ LearningSmartContract: Basic implementation of a simple smart contract for bank 
 SocialNetworkPrototype: Basic implementation of a simple social network in Solidity. 
 * Inspiration from TaskManager smart contract, led by [Solange Gueires at Microsoft Reactor Sao Paulo Workshop](https://github.com/microsoft/ReactorSaoPaulo/tree/main/Workshops/Blockchain/Learn_Solidity)
 
-ArticleSocialNetworkPrototype: Authored article submitted to (Journal and Event Management System (JEMS))[https://jems.sbc.org.br/jems2/index.php?r=paper/view&p=217544] we based our prototype. Written in collaboration with 
+ArticleSocialNetworkPrototype: (Authored article)[https://github.com/jorgesalhani/SocialNetworkBlockchain/blob/main/ArticleSocialNetworkPrototype.pdf] submitted to (Journal and Event Management System (JEMS))[https://jems.sbc.org.br/jems2/index.php?r=paper/view&p=217544] we based our prototype. Written in collaboration with 
 
 * Gabrielle Ap Pires Alves (Universidade de São Paulo)
 * Marcelo G. Manzato (University of Sao Paulo)
