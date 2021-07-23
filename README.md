@@ -173,7 +173,7 @@ With another account, let us add a post and get its content
 
 Let us suppose our 2nd friend read this post. She knows Brazil defeated China, however the score was not 3x2. She then decided to label it as Naive (partially truth) and update the truth label to 5
 
-![Step 17](https://github.com/jorgesalhani/SocialNetworkBlockchain/blob/main/ExplanatoryFigures/step17.png)
+![Step 18](https://github.com/jorgesalhani/SocialNetworkBlockchain/blob/main/ExplanatoryFigures/step18.png)
 
 ### Disclaimer
 This prototype was theoricised to be more general, as shown in [our article](https://github.com/jorgesalhani/SocialNetworkBlockchain/blob/main/ArticleSocialNetworkPrototype.pdf), however for this discipline's purpose, this is the final version we have.
