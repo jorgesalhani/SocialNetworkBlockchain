@@ -29,23 +29,43 @@ Open the [remix platform](https://remix.ethereum.org)
 
 Click on LOAD FROM: GitHub
 
-At the first, click on LOAD FROM: GitHub. It will pop up a window. In the text field to be filled, paste the url:
+![Step 1](https://github.com/jorgesalhani/SocialNetworkBlockchain/blob/main/ExplanatoryFigures/step1.png)
+
+Into the text field to be filled, paste the url
 
 ```code
 https://github.com/jorgesalhani/SocialNetworkBlockchain/blob/main/SocialNetworkPrototype.sol
 ```
+![Step 2](https://github.com/jorgesalhani/SocialNetworkBlockchain/blob/main/ExplanatoryFigures/step2.png)
 
-Click on the 
+Click on the new created path to the .sol file: github > jorgesalhani > SocialNetworkBlockchain > SocialNetworkPrototype.sol
 
-Firstly, at the leftmost sidebar (with four icons, namely File explorers, Solidity compiler, Deploy & run transactions, Plugin manager) click on Solidity compiler icon. You may want to modify the file at your wish, so, at COMPILER CONFIGURATION section, mark the Auto compile checkbox. Finally, click on the big blue button Compile SocialNetworkPrototype.sol. 
+![Step 3](https://github.com/jorgesalhani/SocialNetworkBlockchain/blob/main/ExplanatoryFigures/step3.png)
 
-Back to the leftmost sidebar with four icons, click on Deploy & run transactions. Then, click on the Deploy orange button.
+At the leftmost vertical navbar, click on the 3rd icon SOLIDITY COMPILER
 
+![Step 4](https://github.com/jorgesalhani/SocialNetworkBlockchain/blob/main/ExplanatoryFigures/step4.png)
 
-Hopefully everything is running properlly and a green check mark will be displayed at the terminal. You can also click on it and a dropdown will be shown inside the terminal with the informations from the contract deployment, such as the transaction hash, the execution cost in gas and the log generated.
+Compile the smart contract by clicking the Compile button
 
-Back to the DEPLOY & RUN TRANSACTIONS tab, at the end you might see, after the section Deployed Contracts the clickable dropdown > TASKMANAGER AT 0XD91...  Click on the arrow!
+![Step 5](https://github.com/jorgesalhani/SocialNetworkBlockchain/blob/main/ExplanatoryFigures/step5.png)
 
-It will drop all functions allowed within the smart contract, and here we start playing with this prototype!
+Hopefully, it will be well-succeeded!
+
+At the vertical navbar, click on the 4th icon DEPLOY & RUN TRANSACTIONS
+
+![Step 6](https://github.com/jorgesalhani/SocialNetworkBlockchain/blob/main/ExplanatoryFigures/step6.png)
+
+Deploy the compiled contract by clicking on the Deploy button. By default a account is already selected. As you can see, it currently has 100 ether.
+
+![Step 7](https://github.com/jorgesalhani/SocialNetworkBlockchain/blob/main/ExplanatoryFigures/step7.png)
+
+By simulating a smart contract deployment, the default selected account must spent an ether fraction amount in order to deploy the contract. Now this account has 99.9999... ether available and the contract (TASKMANAGER) can be seen below the field Deployed Contracts
+
+With the deployment, we can see at the terminal a green checkmark. Now the terminal is important to follow the recorded transactions within the created blockchain.
+
+![Step 8](https://github.com/jorgesalhani/SocialNetworkBlockchain/blob/main/ExplanatoryFigures/step8.png)
+
+By clicking the dropdown below the Deployed Contracts field we have access to all functionalities available by our social network smart contract.
 
 ### Using our Social Network Prototype functions

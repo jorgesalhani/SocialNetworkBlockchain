@@ -87,7 +87,7 @@ contract TaskManager {
         emit PostAdded (msg.sender, _content, _trust_label);
     }
     
-    function update_trust_label(uint _post_index, PostTrustLabel _trust_label) public {
+    function updateTrustLabel(uint _post_index, PostTrustLabel _trust_label) public {
         require (
             (_post_index >= 0 && _post_index < nposts) && 
             (_trust_label >= PostTrustLabel.Fake && _trust_label <= PostTrustLabel.Trustful)
