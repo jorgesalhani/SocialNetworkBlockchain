@@ -72,13 +72,32 @@ The functions (state changing) are:
 
 ```solidity
 addPost(string _content, PostTrustLabel _trust_label),
+
 updateTrustLabel(uint _post_index, PostTrustLabel _trust_label)
 ```
+
+where we define the post trust label as 
+
+```solidity
+    enum PostTrustLabel {
+        Fake, 
+        Unsustainable, 
+        Underestimated, 
+        Inconsistent, 
+        Overestimated, 
+        Naive,
+        Superficial,
+        Trustful
+    }
+```
+
 and the view functions (visualize current state) are:
 
 ```solidity
 getPost(uint _post_index),
+
 listMyPosts,
+
 nposts
 ```
 
