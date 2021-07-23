@@ -70,13 +70,13 @@ By clicking the dropdown below the Deployed Contracts field we have access to al
 
 The functions (state changing) are:
 
-```sol
+```solidity
 addPost(string _content, PostTrustLabel _trust_label),
 updateTrustLabel(uint _post_index, PostTrustLabel _trust_label)
 ```
 and the view functions (visualize current state) are:
 
-```sol
+```solidity
 getPost(uint _post_index),
 listMyPosts,
 nposts
