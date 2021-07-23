@@ -176,7 +176,7 @@ Let us suppose our 2nd friend read this post. She knows Brazil defeated China, h
 ![Step 17](https://github.com/jorgesalhani/SocialNetworkBlockchain/blob/main/ExplanatoryFigures/step17.png)
 
 ### Disclaimer
-This prototype was theoricised to be more general, as shown in this article, however for this discipline's purpose, this is the final version we have.
+This prototype was theoricised to be more general, as shown in [our article](https://github.com/jorgesalhani/SocialNetworkBlockchain/blob/main/ArticleSocialNetworkPrototype.pdf), however for this discipline's purpose, this is the final version we have.
 
 Hope you enjoyed! 💟
 
