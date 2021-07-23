@@ -68,4 +68,20 @@ With the deployment, we can see at the terminal a green checkmark. Now the termi
 
 By clicking the dropdown below the Deployed Contracts field we have access to all functionalities available by our social network smart contract.
 
+The functions (state changing) are:
+
+```sol
+addPost(string _content, PostTrustLabel _trust_label),
+updateTrustLabel(uint _post_index, PostTrustLabel _trust_label)
+```
+and the view functions (visualize current state) are:
+
+```sol
+getPost(uint _post_index),
+listMyPosts,
+nposts
+```
+
+The environment is set! Now let us move to the fun part and create posts with our smart contract!
+
 ### Using our Social Network Prototype functions
