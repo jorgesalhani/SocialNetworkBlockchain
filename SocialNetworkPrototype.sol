@@ -42,6 +42,8 @@ contract TaskManager {
 
     event PostAdded(address owner, string content, PostTrustLabel trust_label);
     
+    event TustLabelAltered(address owner, PostTrustLabel old_trust_label, PostTrustLabel new_trust_label);
+    
     modifier onlyOwner (uint _post_index) {
          if  (posts[_post_index].owner == msg.sender) {
            _;
@@ -50,12 +52,18 @@ contract TaskManager {
     
     constructor() public {
         nposts = 0;      
-        addPost ("News 1 - REALLY FAKE", PostTrustLabel.Fake);
-        addPost ("News 2 - INCONSISTENT", PostTrustLabel.Inconsistent);
-        addPost ("News 3 - TRUSTFUL", PostTrustLabel.Trustful);
+        addPost ("News 0 - FAKE", PostTrustLabel.Fake);
+        addPost ("News 1 - UNSUSTAINABLE", PostTrustLabel.Unsustainable);
+        addPost ("News 2 - UNDERESTIMATED", PostTrustLabel.Underestimated);
+        addPost ("News 3 - INCONSISTENT", PostTrustLabel.Inconsistent);
+        addPost ("News 4 - OVERESTIMATED", PostTrustLabel.Overestimated);
+        addPost ("News 5 - NAIVE", PostTrustLabel.Naive);
+        addPost ("News 6 - SUPERFICIAL", PostTrustLabel.Superficial);
+        addPost ("News 7 - TRUSTFUL", PostTrustLabel.Trustful);
     }    
 
     function getPost(uint _post_index) public view
+        require (_post_index >= 0 && _post_index < nposts);
         returns (address owner, string memory content, PostTrustLabel trust_label) {
         
         owner = posts[_post_index].owner;
@@ -80,8 +88,13 @@ contract TaskManager {
         emit PostAdded (msg.sender, _content, _trust_label);
     }
     
-    function update_trust_label(uint _post_index, PostTrustLabel _trust_label) public onlyOwner(_post_index) {
+    function update_trust_label(uint _post_index, PostTrustLabel _trust_label) public {
+        require (
+            (_post_index >= 0 && _post_index < nposts) && 
+            (_trust_label >= 0 && _trust_label <= 7)
+            );
+        PostTrustLabel older_trust_label = posts[_post_index].trust_label;
         posts[_post_index].trust_label = _trust_label;
+        emit TustLabelAltered(msg.sender, older_trust_label, _trust_label);
     }
-    
 }
