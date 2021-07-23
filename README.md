@@ -178,5 +178,5 @@ Let us suppose our 2nd friend read this post. She knows Brazil defeated China, h
 ### Disclaimer
 This prototype was theoricised to be more general, as shown in this article, however for this discipline's purpose, this is the final version we have.
 
-Hope you enjoyed! cheers!!
+Hope you enjoyed! 💟
 
