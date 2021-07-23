@@ -131,11 +131,11 @@ Now, let us step forward to the state-changing functions.
 
 By clicking at **addPost** we must informe its content and its trust label.
 
-![Step 13](https://github.com/jorgesalhani/SocialNetworkBlockchain/blob/main/ExplanatoryFigures/step13.png)
+![Step 13new](https://github.com/jorgesalhani/SocialNetworkBlockchain/blob/main/ExplanatoryFigures/step13new.png)
 
 Confirm the transaction by pressing the button transact. It will generate a log into the terminal.
 
-![Step 14](https://github.com/jorgesalhani/SocialNetworkBlockchain/blob/main/ExplanatoryFigures/step14.png)
+![Step 14new](https://github.com/jorgesalhani/SocialNetworkBlockchain/blob/main/ExplanatoryFigures/step14new.png)
 
 Some of the informations displayed are: 
 
