@@ -27,13 +27,15 @@ Otherwise, if you want just to check out our social network prototype, it goes a
 
 Open the [remix platform](https://remix.ethereum.org)
 
+Click on LOAD FROM: GitHub
+
 At the first, click on LOAD FROM: GitHub. It will pop up a window. In the text field to be filled, paste the url:
 
 ```code
 https://github.com/jorgesalhani/SocialNetworkBlockchain/blob/main/SocialNetworkPrototype.sol
 ```
 
-At the FILE EXPLORERS it will be created a folder named 'github' inside which you can also see a path to SocialNetworkProrotype.sol. Click over this file and you will be able to see the source code.
+Click on the 
 
 Firstly, at the leftmost sidebar (with four icons, namely File explorers, Solidity compiler, Deploy & run transactions, Plugin manager) click on Solidity compiler icon. You may want to modify the file at your wish, so, at COMPILER CONFIGURATION section, mark the Auto compile checkbox. Finally, click on the big blue button Compile SocialNetworkPrototype.sol. 
 
