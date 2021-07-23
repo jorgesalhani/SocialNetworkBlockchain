@@ -63,7 +63,6 @@ contract TaskManager {
     }    
 
     function getPost(uint _post_index) public view
-        require (_post_index >= 0 && _post_index < nposts);
         returns (address owner, string memory content, PostTrustLabel trust_label) {
         
         owner = posts[_post_index].owner;
@@ -91,7 +90,7 @@ contract TaskManager {
     function update_trust_label(uint _post_index, PostTrustLabel _trust_label) public {
         require (
             (_post_index >= 0 && _post_index < nposts) && 
-            (_trust_label >= 0 && _trust_label <= 7)
+            (_trust_label >= PostTrustLabel.Fake && _trust_label <= PostTrustLabel.Trustful)
             );
         PostTrustLabel older_trust_label = posts[_post_index].trust_label;
         posts[_post_index].trust_label = _trust_label;
