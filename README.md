@@ -20,6 +20,17 @@ ArticleSocialNetworkPrototype: [Authored article](https://github.com/jorgesalhan
 * Marcelo G. Manzato (University of Sao Paulo)
 * Jó Ueyama (Universidade de São Paulo)
 
+I am also thankful for the support from each member from our project 💟 Namely:
+
+* Ana Clara Priorno
+* Caio Vinicius de Oliveira
+* Gabrielle Alves  
+* Luca Curcio 
+* Lucas Caetano 
+* Nathielle Pereira 
+* Thiago Marafeli
+
+
 ### How to use our social network
 
 If you want to see the whole repository content, 
